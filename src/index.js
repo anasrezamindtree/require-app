@@ -1,13 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import ImageWithText from "@anasrezamindtree/imagewithtext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+const dt = {
+  heading: "description",
+  description: "heading",
+};
+
+{
+  /* dynamic not working fine */
+}
+// const temp = "imagewithtext";
+// const Component = require(`@anasrezamindtree/${temp}`);
+
 root.render(
   <React.StrictMode>
-    <App />
+    {/* direct import is working fine */}
+    <ImageWithText {...dt} />
+
+    {/* dynamic not working fine */}
+    {/* <Component {...dt} /> */}
   </React.StrictMode>
 );
 
